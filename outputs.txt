@@ -1,0 +1,161 @@
+Part - A:
+----------
+
+
+Direct Mapped Cache:
+----------------------
+
+
+login-20-26:/CS5375$ ./a.out direct ./trace_for_students/trace.hpcg
+
+==================================
+Cache type:    Direct-Mapped Cache
+==================================
+Cache Hits:    1234248
+Cache Misses:  265752
+Cache Hit Rate: 0.822832
+Cache Miss Rate: 0.177168
+
+
+
+
+login-20-26:/CS5375$ ./a.out direct ./trace_for_students/trace.stream
+
+==================================
+Cache type:    Direct-Mapped Cache
+==================================
+Cache Hits:    1042085
+Cache Misses:  2191970
+Cache Hit Rate: 0.322222
+Cache Miss Rate: 0.677778
+
+
+
+
+login-20-26:/CS5375$ ./a.out direct ./trace_for_students/trace.stream_10
+
+==================================
+Cache type:    Direct-Mapped Cache
+==================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate: 0.000000
+Cache Miss Rate: 1.000000
+
+
+
+
+login-20-26:/CS5375$ ./a.out direct ./trace_for_students/trace.stream_20
+
+==================================
+Cache type:    Direct-Mapped Cache
+==================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate: 0.200000
+Cache Miss Rate: 0.800000
+
+
+
+
+
+Part-B
+
+
+login-20-26:/CS5375$ ./cachesim n-way ./trace_for_students/trace.stream
+
+==================================
+Cache type:    N-Way-Associative-Mapped Cache
+==================================
+Cache Hits:    1070020
+Cache Misses:  2164035
+Cache Hit Rate: 0.33
+Cache Miss Rate: 0.67
+
+
+
+
+login-20-26:/CS5375$ ./cachesim fully ./trace_for_students/trace.stream
+
+==================================
+Cache type:    Fully-Associative-Mapped Cache
+==================================
+Cache Hits:    1076576
+Cache Misses:  2157479
+Cache Hit Rate: 0.33
+Cache Miss Rate: 0.67
+
+
+
+
+
+
+
+
+
+Part C:
+---------
+
+
+Two-Level Cache Simulation:
+--------------------------
+
+
+login-20-25:/CS5375$ ./a.out L1L2 ./trace_for_students/trace.stream
+
+==================================
+Cache type:    Multi Level Cache
+==================================
+Cache L1 Hits:    2275
+Cache L1 Misses:  2012423
+Cache L1 Hit Rate: 0.001129
+Cache L1 Miss Rate: 0.998871
+Cache L2 Hits:    2184
+Cache L2 Misses:  4343
+Cache L2 Hit Rate: 0.334610
+Cache L2 Miss Rate: 0.665390
+
+
+login-20-25:/CS5375$ ./a.out Directmapped ./trace_for_students/trace.stream_10
+
+==================================
+Cache type:    Multi Level Cache
+==================================
+Cache L1 Hits:    0
+Cache L1 Misses:  10
+Cache L1 Hit Rate: 0.000000
+Cache L1 Miss Rate: 1.000000
+Cache L2 Hits:    0
+Cache L2 Misses:  10
+Cache L2 Hit Rate: 0.000000
+Cache L2 Miss Rate: 1.000000
+
+
+
+login-20-25:/CS5375$ ./a.out L1L2 ./trace_for_students/trace.stream_20
+
+==================================
+Cache type:    Multi Level Cache
+==================================
+Cache L1 Hits:    1
+Cache L1 Misses:  19
+Cache L1 Hit Rate: 0.050000
+Cache L1 Miss Rate: 0.950000
+Cache L2 Hits:    3
+Cache L2 Misses:  16
+Cache L2 Hit Rate: 0.157895
+Cache L2 Miss Rate: 0.842105
+
+login-20-25:/CS5375$ ./a.out L1L2 ./trace_for_students/trace.hpcg
+
+==================================
+Cache type:    Multi Level Cache
+==================================
+Cache L1 Hits:    320
+Cache L1 Misses:  174
+Cache L1 Hit Rate: 0.647773
+Cache L1 Miss Rate: 0.352227
+Cache L2 Hits:    602
+Cache L2 Misses:  321
+Cache L2 Hit Rate: 0.652221
+Cache L2 Miss Rate: 0.347779
